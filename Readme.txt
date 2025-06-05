@@ -1,93 +1,50 @@
-<script>
-      // 🎯 SIMULACIÓN DEL ENVÍO DEL FORMULARIO
+# 📝 Formulario de Registro en HTML
 
-      // Esperar a que el formulario sea enviado
-      document
-        .getElementById('miFormulario')
-        .addEventListener('submit', function (evento) {
-          // 1. Prevenir que la página se recargue (comportamiento por defecto)
-          evento.preventDefault();
+Este proyecto es una página web sencilla con un formulario de registro diseñado para recolectar información de personas interesadas en cursos de maquillaje. El formulario incluye una amplia variedad de campos HTML5 para demostrar el uso de etiquetas modernas, validación con atributos `pattern`, y elementos semánticos.
 
-          // 2. Capturar todos los datos del formulario
-          const formulario = evento.target;
-          const datosFormulario = new FormData(formulario);
+## 🌐 Tecnologías utilizadas
 
-          // 3. Mostrar los datos en la consola (para estudiantes avanzados)
-          console.log('📊 Datos del formulario:');
-          for (let [campo, valor] of datosFormulario.entries()) {
-            console.log(`${campo}: ${valor}`);
-          }
+- HTML5
+- CSS3 (en archivo externo `styles.css`)
 
-          // 4. Convertir los datos a un formato legible
-          let datosHTML = '';
+## 📁 Estructura de carpetas
 
-          // Recorrer cada campo y crear HTML para mostrar
-          for (let [campo, valor] of datosFormulario.entries()) {
-            // Hacer más legibles los nombres de los campos
-            let nombreCampo = campo;
-            switch (campo) {
-              case 'nombre':
-                nombreCampo = 'Nombre completo';
-                break;
-              case 'email':
-                nombreCampo = 'Correo electrónico';
-                break;
-              case 'edad':
-                nombreCampo = 'Edad';
-                break;
-              case 'ciudad':
-                nombreCampo = 'Ciudad';
-                break;
-              case 'experiencia':
-                nombreCampo = 'Experiencia en programación';
-                break;
-              case 'acepto':
-                nombreCampo = 'Términos aceptados';
-                break;
-              case 'comentarios':
-                nombreCampo = 'Comentarios';
-                break;
-            }
+mi-formulario/
+├── index.html
+├── _css/
+│ └── styles.css
+└── _img/
+└── flechita.jpg
 
-            // Si el campo tiene valor, mostrarlo
-            if (valor && valor.trim() !== '') {
-              datosHTML += `
-                        <div class="dato">
-                            <span class="etiqueta">${nombreCampo}:</span> ${valor}
-                        </div>
-                    `;
-            }
-          }
 
-          // 5. Mostrar los resultados en la página
-          document.getElementById('datosEnviados').innerHTML = datosHTML;
-          document.getElementById('resultado').style.display = 'block';
+## ✨ Características del formulario
 
-          // 6. Scroll suave hacia los resultados
-          document.getElementById('resultado').scrollIntoView({
-            behavior: 'smooth',
-          });
+- Validación de campos con expresiones regulares (`pattern`)
+- Campos obligatorios (`required`)
+- Campos con diferentes tipos: texto, fecha, hora, email, teléfono, contraseña, select, radio, checkbox, archivo, color, búsqueda, URL, semana, mes, rango, datetime, y textarea
+- Imagen como botón de envío decorativo
+- Diseño responsivo (según lo definido en `styles.css`)
 
-          // 7. Mensaje de confirmación adicional
-          alert(
-            '¡Formulario enviado correctamente! 🎉\nRevisa los datos más abajo.'
-          );
-        });
+## 🧪 Cómo probar
 
-      // 🎯 FUNCIONALIDAD EXTRA: Limpiar formulario
-      function limpiarFormulario() {
-        document.getElementById('miFormulario').reset();
-        document.getElementById('resultado').style.display = 'none';
-      }
+1. Clona o descarga el repositorio.
+2. Abre el archivo `index.html` con tu navegador web.
+3. Llena el formulario y haz clic en “Enviar Formulario” o en la imagen decorativa.
 
-      // Agregar botón de limpiar después del envío
-      document.addEventListener('DOMContentLoaded', function () {
-        const contenedor = document.querySelector('.container');
-        const botonLimpiar = document.createElement('button');
-        botonLimpiar.innerHTML = '🗑️ Limpiar Formulario';
-        botonLimpiar.style.backgroundColor = '#ff9800';
-        botonLimpiar.style.marginTop = '10px';
-        botonLimpiar.onclick = limpiarFormulario;
-        contenedor.appendChild(botonLimpiar);
-      });
-    </script>
+## 📌 Notas adicionales
+
+- Este proyecto es educativo y está orientado al aprendizaje del uso de formularios en HTML.
+- El formulario no está conectado a una base de datos ni a un backend. Para que los datos sean procesados, se necesitaría integrar JavaScript o un lenguaje de servidor como PHP, Python o Node.js.
+
+## 📷 Captura de pantalla
+
+_Añade aquí una imagen de vista previa si deseas mostrar cómo se ve el formulario._
+
+---
+
+### 📩 Autor
+
+Desarrollado por [Tu Nombre]  
+[Correo de contacto opcional]  
+[Institución educativa, si aplica]
+

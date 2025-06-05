@@ -2,9 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Primer Formulario HTML</title>
     <link rel="stylesheet" href="_css/styles.css" />
   </head>
@@ -12,171 +10,167 @@
     <div class="container">
       <h1>📝 Formulario de Registro</h1>
 
-  <form id="miFormulario">
-  <!-- Nombre completo -->
-  <div class="form-group">
-    <label for="nombre">Nombre completo:</label>
-    <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre completo" autofocus pattern="[A-Za-z ]{3,40}" />
-  </div>
+      <form id="miFormulario">
+        <!-- Nombre completo -->
+        <div class="form-group">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre completo" autofocus pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,40}" />
+        </div>
 
-  <!-- Fecha de nacimiento -->
-  <div class="form-group">
-    <label for="dateInput">Fecha de nacimiento:</label>
-    <input type="date" id="dateInput" name="dateInput" />
-  </div>
+        <!-- Fecha de nacimiento -->
+        <div class="form-group">
+          <label for="dateInput">Fecha de nacimiento:</label>
+          <input type="date" id="dateInput" name="dateInput" />
+        </div>
 
-  <!-- Hora de nacimiento -->
-  <div class="form-group">
-    <label for="timeInput">Hora de nacimiento:</label>
-    <input type="time" id="timeInput" name="timeInput" />
-  </div>
+        <!-- Hora de nacimiento -->
+        <div class="form-group">
+          <label for="timeInput">Hora de nacimiento:</label>
+          <input type="time" id="timeInput" name="timeInput" />
+        </div>
 
-  <!-- Edad -->
-  <div class="form-group">
-    <label for="edad">Edad:</label>
-    <input type="number" id="edad" name="edad" min="18" max="100" required placeholder="Tu edad" />
-  </div>
+        <!-- Edad -->
+        <div class="form-group">
+          <label for="edad">Edad:</label>
+          <input type="number" id="edad" name="edad" min="18" max="100" required placeholder="Tu edad" />
+        </div>
 
-  <!-- Correo electrónico -->
-  <div class="form-group">
-    <label for="email">Correo electrónico:</label>
-    <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com" />
-  </div>
+        <!-- Correo electrónico -->
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" />
+        </div>
 
-  <!-- Teléfono -->
-  <div class="form-group">
-    <label for="telInput">Teléfono:</label>
-    <input type="tel" id="telInput" name="telInput" />
-  </div>
+        <!-- Teléfono -->
+        <div class="form-group">
+          <label for="telInput">Teléfono:</label>
+          <input type="tel" id="telInput" name="telInput" pattern="[0-9]{10}" placeholder="Ej: 3101234567" />
+        </div>
 
-  <!-- Contraseña -->
-  <div class="form-group">
-    <label for="passwordExtra">Contraseña:</label>
-    <input type="password" id="passwordExtra" name="passwordExtra" />
-  </div>
+        <!-- Contraseña -->
+        <div class="form-group">
+          <label for="passwordExtra">Contraseña:</label>
+          <input type="password" id="passwordExtra" name="passwordExtra" pattern=".{6,}" placeholder="Mínimo 6 caracteres" />
+        </div>
 
-  <!-- Ciudad -->
-  <div class="form-group">
-    <label for="ciudad">Ciudad:</label>
-    <select id="ciudad" name="ciudad" required>
-      <option value="">Selecciona tu ciudad</option>
-      <option value="bogota">Bogotá</option>
-      <option value="medellin">Medellín</option>
-      <option value="cali">Cali</option>
-      <option value="barranquilla">Barranquilla</option>
-      <option value="otra">Otra</option>
-    </select>
-  </div>
+        <!-- Ciudad -->
+        <div class="form-group">
+          <label for="ciudad">Ciudad:</label>
+          <select id="ciudad" name="ciudad" required>
+            <option value="">Selecciona tu ciudad</option>
+            <option value="bogota">Bogotá</option>
+            <option value="medellin">Medellín</option>
+            <option value="cali">Cali</option>
+            <option value="barranquilla">Barranquilla</option>
+            <option value="otra">Otra</option>
+          </select>
+        </div>
 
-  <!-- Estudios en maquillaje -->
-  
-  <div class="form-group radios">
-  <label class="titulo">Estudios en maquillaje:</label>
-  <div class="radio-row horizontal">
-    <label><input type="radio" name="experiencia" value="principiante" required /> Principiante</label>
-    <label><input type="radio" name="experiencia" value="intermedio" /> Intermedio</label>
-    <label><input type="radio" name="experiencia" value="avanzado" /> Avanzado</label>
-  </div>
-</div>
+        <!-- Estudios en maquillaje -->
+        <div class="form-group radios">
+          <label class="titulo">Estudios en maquillaje:</label>
+          <div class="radio-row horizontal">
+            <label><input type="radio" name="experiencia" value="principiante" required /> Principiante</label>
+            <label><input type="radio" name="experiencia" value="intermedio" /> Intermedio</label>
+            <label><input type="radio" name="experiencia" value="avanzado" /> Avanzado</label>
+          </div>
+        </div>
 
+        <!-- Certificado de graduación -->
+        <div class="form-group">
+          <label for="fileInput">Certificado de graduación:</label>
+          <input type="file" id="fileInput" name="fileInput" />
+        </div>
 
+        <!-- Campo oculto -->
+        <div class="form-group">
+          <input type="hidden" name="oculto" value="valor oculto" />
+        </div>
 
+        <!-- Mes de graduación -->
+        <div class="form-group">
+          <label for="monthInput">Mes de graduación:</label>
+          <input type="month" id="monthInput" name="monthInput" />
+        </div>
 
+        <!-- Rango de experiencia -->
+        <div class="form-group">
+          <label for="rangeInput">Rango de experiencia laboral como maquillista:</label>
+          <input type="range" id="rangeInput" name="rangeInput" />
+        </div>
 
-  <!-- Certificado de graduación -->
-  <div class="form-group">
-    <label for="fileInput">Certificado de graduación:</label>
-    <input type="file" id="fileInput" name="fileInput" />
-  </div>
+        <!-- Campo de búsqueda -->
+        <div class="form-group">
+          <label for="searchInput">Buscar:</label>
+          <input type="search" id="searchInput" name="searchInput" pattern="[A-Za-z0-9 ]{3,40}" placeholder="Busca algo..." />
+        </div>
 
-  <!-- Campo oculto -->
-  <div class="form-group">
-    <input type="hidden" name="oculto" value="valor oculto" />
-  </div>
+        <!-- URL -->
+        <div class="form-group">
+          <label for="urlInput">URL:</label>
+          <input type="url" id="urlInput" name="urlInput" placeholder="https://ejemplo.com" pattern="https?://.+" />
+        </div>
 
+        <!-- Fecha y hora -->
+        <div class="form-group">
+          <label for="datetimeInput">Fecha y hora en la que diligencia este formulario:</label>
+          <input type="datetime-local" id="datetimeInput" name="datetimeInput" />
+        </div>
 
-  <!-- Mes de graduación -->
-  <div class="form-group">
-    <label for="monthInput">Mes de graduación:</label>
-    <input type="month" id="monthInput" name="monthInput" />
-  </div>
+        <!-- Semana libre -->
+        <div class="form-group">
+          <label for="weekInput">Semanas libres del curso:</label>
+          <input type="week" id="weekInput" name="weekInput" />
+        </div>
 
-  <!-- Rango de experiencia -->
-  <div class="form-group">
-    <label for="rangeInput">Rango de experiencia laboral como maquillista:</label>
-    <input type="range" id="rangeInput" name="rangeInput" />
-  </div>
+        <!-- Color de uniforme -->
+        <div class="form-group">
+          <label for="colorInput">Color de uniforme:</label>
+          <input type="color" id="colorInput" name="colorInput" />
+        </div>
 
-  <!-- Campo de búsqueda -->
-  <div class="form-group">
-    <label for="searchInput">Buscar:</label>
-    <input type="search" id="searchInput" name="searchInput" />
-  </div>
+        <!-- Comentarios -->
+        <div class="form-group">
+          <label for="comentarios">Comentarios adicionales:</label>
+          <textarea id="comentarios" name="comentarios" rows="4" placeholder="Cuéntanos algo más sobre ti (opcional)" pattern="[A-Za-z0-9 .,;:¡!¿?()]{0,300}"></textarea>
+        </div>
 
-  <!-- URL -->
-  <div class="form-group">
-    <label for="urlInput">URL:</label>
-    <input type="url" id="urlInput" name="urlInput" />
-  </div>
+        <!-- Aceptar términos -->
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="terminos" required /> Acepto los términos y condiciones
+          </label>
+        </div>
 
-  <!-- Fecha y hora -->
-  <div class="form-group">
-    <label for="datetimeInput">Fecha y hora en la que diligencia este formulario:</label>
-    <input type="datetime-local" id="datetimeInput" name="datetimeInput" />
-  </div>
+        <!-- Botones -->
+        <div class="form-group">
+          <input type="reset" value="Resetear formulario" />
+        </div>
+        <div class="form-group">
+          <button type="submit">Enviar Formulario</button>
+        </div>
 
-  <!-- Semana libre -->
-  <div class="form-group">
-    <label for="weekInput">Semanas libres del curso:</label>
-    <input type="week" id="weekInput" name="weekInput" />
-  </div>
+        <!-- Imagen como botón -->
+        <div class="form-group">
+          <label for="imgInput"> </label>
+          <input type="image" id="imgInput" src="_img/flechita.jpg" alt="Enviar imagen" />
+          <style>
+            #imgInput {
+              width: 60px;
+              height: auto;
+              display: block;
+              margin: 0 auto;
+              transition: transform 0.3s ease;
+            }
 
-  <!-- Color de uniforme -->
-  <div class="form-group">
-    <label for="colorInput">Color de uniforme:</label>
-    <input type="color" id="colorInput" name="colorInput" />
-  </div>
-
-  <!-- Comentarios -->
-  <div class="form-group">
-    <label for="comentarios">Comentarios adicionales:</label>
-    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Cuéntanos algo más sobre ti (opcional)"></textarea>
-  </div>
-
-  <!-- Aceptar términos -->
-  <div class="form-group">
-    <label>
-      <input type="checkbox" id="terminos" required /> Acepto los términos y condiciones
-    </label>
-  </div>
-
-  
-  <div class="form-group">
-    <input type="reset" value="Resetear formulario" />
-  </div>
-  <div class="form-group">
-    <button type="submit"> Enviar Formulario</button>
-  </div>
-</form>
- <!-- Imagen como botón -->
-  <div class="form-group">
-    <label for="imgInput"> </label>
-    <input type="image" id="imgInput" src="_img/flechita.jpg" alt="Enviar imagen" />
-<style>
-  #imgInput {
-    width: 60px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    transition: transform 0.3s ease;
-  }
-
-  #imgInput:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-</style>
-  </div>
-
+            #imgInput:hover {
+              transform: scale(1.1);
+              cursor: pointer;
+            }
+          </style>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
+
