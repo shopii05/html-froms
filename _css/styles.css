@@ -1,0 +1,137 @@
+/* ----- General Layout ----- */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffeef4;
+  color: #333;
+  padding: 2em;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  border: 2px solid #f9c3d4;
+}
+
+h1 {
+  text-align: center;
+  color: #d63384;
+  margin-bottom: 1.5em;
+}
+
+/* ----- Form Elements ----- */
+.form-group {
+  margin-bottom: 1.5em;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  color: #b3005e;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+input[type="tel"],
+input[type="month"],
+input[type="range"],
+input[type="search"],
+input[type="url"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="color"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75em;
+  border-radius: 8px;
+  border: 1px solid #f4a6c1;
+  background: #fff0f5;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ff69b4;
+  background-color: #ffe4ee;
+}
+
+/* ----- Radio Buttons ----- */
+.radio-row.horizontal {
+  display: flex;
+  gap: 2em;
+}
+
+.radio-row.horizontal label {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+input[type="radio"] {
+  accent-color: #ff69b4;
+}
+
+/* ----- Checkbox ----- */
+input[type="checkbox"] {
+  accent-color: #ff69b4;
+}
+
+/* ----- Buttons ----- */
+input[type="button"],
+input[type="reset"],
+button[type="submit"] {
+  width: 100%; /* 👈 Hace que ocupen todo el contenedor */
+  padding: 0.75em 1em;
+  background-color: #ff69b4;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1em;
+  box-sizing: border-box;
+}
+
+input[type="button"]:hover,
+input[type="reset"]:hover,
+button[type="submit"]:hover {
+  background-color: #df9fbf;
+}
+input[type="button"]:active,
+
+/* ----- File Upload and Image Button ----- */
+input[type="file"],
+input[type="image"] {
+  margin-top: 0.5em;
+}
+
+/* ----- Textarea ----- */
+textarea {
+  resize: vertical;
+}
+
+/* ----- Result Section ----- */
+.resultado {
+  margin-top: 2em;
+  padding: 1em;
+  background-color: #ffe4ee;
+  border: 1px solid #ffb6c1;
+  border-radius: 8px;
+  color: #6a004d;
+}
